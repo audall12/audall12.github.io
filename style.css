@@ -1,0 +1,107 @@
+*{
+	/*border: solid 1px black;*/
+}
+body{
+	font-family: 'Raleway', sans-serif;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+html{
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+a{
+	font-weight: bolder;
+	color: #666;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+figcaption {
+	color: #000;
+	font-weight: bolder;
+}
+#bold {
+	font-weight: bold;
+}
+
+#intro{
+	height: 100vh;
+}
+.display-1{
+	margin-top: 15vh;
+}
+.btn {
+	background: none;
+	border: solid 2px darkgrey;
+	color: black;
+}
+.btn:hover{
+	background-color: white;
+	border: solid 2px black;
+}
+#github{
+	width:90px;
+}
+#linkedin{
+	width: 100px;
+}
+.container{
+    background-size: 30px 30px;
+    background-image: radial-gradient(circle, #bbb 1px, rgba(0, 0, 0, 0) 1px);
+	height: 85vh; 
+    overflow: scroll;
+    padding-bottom: 0;
+    padding-top: 0;
+	margin-bottom: 0;
+}
+	.freebook-text{
+		letter-spacing: 0.15em;
+		font-weight: normal;
+		color: #555;
+	}
+		.freebook-text h1{
+			color: #333;
+		}
+	.worldwhat-text{
+		font-family: 'Varela Round', sans-serif;
+		font-size: 20px;
+		background: none;
+		color: #888;
+	}
+		.worldwhat-text h1 {
+			color: green;
+		}
+.jumbotron{
+	background: none;
+}
+.card{
+	/*border: solid 4px #666;*/
+	border: none;
+	background: none;
+}
+	.card-header, .card-footer{
+		background: none;
+		border: none;
+	}
+/*.navbar, .navbar-light{
+	background: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}*/
+.navbar-toggler{
+	position: absolute;
+	top: 12px;
+	left: 82vw;
+}
+/*      Removing scrollbar       */
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red 
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}*/

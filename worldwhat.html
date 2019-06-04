@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Anna Udall</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-light">
+	  <!-- Brand -->
+	  <a class="navbar-brand" href="index.html">@</a>
+
+	  <!-- Toggler/collapsibe Button -->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <!-- Navbar links -->
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html#about">About</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html#contact">Contact</a>
+	      </li>
+	        <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+		    <div class="dropdown-menu">
+		      <a class="dropdown-item" href="freebook.html">Freebook</a>
+		      <a class="dropdown-item" href="worldwhat.html">WorldWhat?</a>
+		      <div class="dropdown-divider"></div>
+		      <a class="dropdown-item" href="https://codepen.io/audall12/" target="_blank">CodePen</a>
+		      <a class="dropdown-item" href="hex.html">Hexidecimal</a>
+		    </div>
+		  </li>
+	    </ul>
+	  </div> 
+	</nav>
+</header>
+<div class="container p-md-5 pb-m-0 mt-5 worldwhat-text" id="projectDiv">
+	<main>
+		<h1 class="my-5">WorldWhat?</h1>
+		<p>This is a personal project I wanted to make using OpenWeatherMap API.</p> 
+		<p>After doing a bit of research on popular frameworks to use with Python, I also thought it'd be a good opportunity to learn something new whilst making something I was really excited about.</p>
+		<p>So this is a fun quiz I made in Django!</p>
+		<div class="row justify-content-around align-items-center my-5">
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/30 worldwhat phone home (4).png">
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/31 worldwhat phone start (3).png">
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/36 worldwhat complete (2).png">
+			</div>
+		</div>
+		<p>This temperature quiz asks you 15 questions, each one selects a location at random from a database of over 200,000 cities around the world!</p>
+		<p>All you have to do is guess the temperature, the results can be suprising and educational.</p>
+		<p>Unfortunately you don't score any points of you're more than 5 degrees off, but otherwise you earn 1 point if you're 5 degrees off, 2 points if you're 4  off... you get the picture. Oh and you score 10 points if you guess it perfectly (all temperatures are rounded to the nearest degree).</p>
+		<div class="row justify-content-around align-items-center my-5">
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/32 worldwhat phone upside (3).png">
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/33 worldwhat phone happy (3).png">
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/34 worldwhat phone smiley (2).png">
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/35 worldwhat phone nerd (3).png">
+			</div>
+		</div>
+		<p>The app is full of positive reinforcement as a little world emoji guides you through the quiz and lets you know how you did on the previous question.</p>
+		<p>At the end of the quiz, you find out where you sit compared to the average score, and depending on how well you do, you might even make it onto the leaderboard!</p>
+		<div class="row justify-content-around align-items-center my-5">
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/37 worldwhat highscore (2).png">
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img class="img-fluid" src="images/Screenshots/38 worldwhat leaderboard (2).png">
+			</div>
+		</div>
+	</main>
+	<footer class="text-center">
+		<p>WorldWhat was made with Django (SQLite and Python) and the OpenWeatherMap API.</p>
+		<p>The world emoji was created by me using Adobe Photoshop.</p>
+	</footer>
+</div>
+</body>

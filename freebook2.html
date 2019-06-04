@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Anna Udall</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-md navbar-light">
+	  <!-- Brand -->
+	  <a class="navbar-brand" href="index.html">@</a>
+
+	  <!-- Toggler/collapsibe Button -->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <!-- Navbar links -->
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html#about">About</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="index.html#contact">Contact</a>
+	      </li>
+	        <li class="nav-item dropdown">
+		    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+		    <div class="dropdown-menu">
+		      <a class="dropdown-item" href="freebook.html">Freebook</a>
+		      <a class="dropdown-item" href="worldwhat.html">WorldWhat?</a>
+		      <div class="dropdown-divider"></div>
+		      <a class="dropdown-item" href="https://codepen.io/audall12/" target="_blank">CodePen</a>
+		      <a class="dropdown-item" href="hex.html">Hexidecimal</a>
+		    </div>
+		  </li>
+	    </ul>
+	  </div> 
+	</nav>
+</header>
+<div class="container p-md-5 pb-m-0 mt-5 freebook-text" id="projectDiv">
+	<main>	
+		<h1 class="mt-5">Freebook</h1>
+		<p class="mb-5" id="bold">An online Python/Flask web application for searching, saving and reading free e-books. </p>
+		<p class="mt-5">This was my final project for Harvard University's CS50x course on <a href="https://www.edx.org">Edx</a>.</p> <p>After an introduction into using Python and Flask, making a project that worked with APIs and databases, we were asked to design and make our own project using the technologies we'd worked with on the course.</p>
+		<p>Freebook is an application where the user can make an account, search for free ebooks by author, publisher or title, and from those results they can catalogue books that they would like to read or have already read, or want to start reading immediately.</p> <p>The books are then organised into 'My Bookcase', where they can be ammended or removed.</p>
+		<figure class="my-5">
+			<img class="img-fluid" src="images/Screenshots/29 freebook login ipad.png" alt="Image of login page">
+			<figcaption class="text-right">Login/ Register page on tablet</figcaption>
+		</figure>
+		<h2 class="my-5">Login/Registration</h2>
+		<ul>
+			<li>The application automatically diverts to Login/Register form if user is logged out.</li>
+			<li>Both Login and Registration forms require all inputs to be filled and for usernames to be valid before submission, this is first checked asynchronously with jQuery and then returns a 500 code error through Python if the user has deactivated javascript.</li>
+			<li>Upon successful registration, a hash of the user's password is stored in the database.</li>
+			<li>All database handling is sanatised for security.</li>
+		</ul>
+		<figure class="my-5">
+			<img class="img-fluid" src="images/Screenshots/20 freebook desktop cropped home.png" alt="Image of homepage">
+			<figcaption class="text-right">Homepage after logging in</figcaption>
+		</figure>
+		<h2 class="my-5">Homepage</h2>
+		<ul>
+			<li>Designed to guide the user to all main areas of the application.</li>
+			<li>A CSS-styled bookshelf contains all of the users' saved books and acts as a quick-look for the 'My Bookcase' page.</li>
+			<li>Underneath is a section that reminds the user of a book they're currently reading, this links to their 'Reading' page.</li>
+			<li>If the user has not catalogued any books, the shelf appears empty with a message suggesting they search for one, if the user isn't reading anything yet, the text in the lower section also suggests they search for a book.</li>
+			<li>Each book on the bookshelf, when selected, produces a modal with information about the book (title, authors, publisher, published date and description) and a button to close the modal.</li>
+		</ul>
+		
+		<figure class="my-5">
+			<img class="img-fluid my-3" src="images/Screenshots/21 freebook desktop cropped search (2).png" alt="Screenshot of search page">
+			<figcaption class="text-right">Search page on desktop</figcaption>
+		</figure>
+		<h2 class="my-5">Search</h2>
+		<ul>
+			<li>Using Google Books API.</li>
+			<li>Initally activated from the navigation bar for easy, instant access.</li>
+			<li>Within the search results page, the user can refine their search with a select form (options are 'author', 'publisher, 'title')</li>
+			<li>An input box is provided for a refined search, if not used, the refined search is carried out on the original query that was sent via the navigation bar.</li>
+			<li>A search produces 20 results, each with an image of the book, title, author(s), published date and a description if available.</li>
+			<li>Each result includes an option to record whether the user wants to read the book or has read the book already. This information is stored in two databases (for either wanting to read or having finished a book) and is found and ammended in 'My Bookcase' page and as a quick-look on the homepage's bookshelf too.</li>
+			<li>On selecting any of these options, a message is flashed asynchronously at the top of the page to inform the user of success or failure (eg. a book may already be in the user's finished list when they want to select that they've read it).</li>
+			<li>The image of the book is a link to start reading immediately, the user is redirected to their Reading page.</li>
+		</ul>
+		<div class="row align-items-center my-5">
+			<div class="col-md-8">
+				<h2 class="my-5">Reading page</h2>
+				<ul>
+					<li>The Reading page is accessed either through the navigation bar or from search results.</li>
+					<li>The books that a user is reading are listed vertically on the left of the page, and a Google Books viewer fills the rest of the page. When a book is selected it is displayed in the Google Books viewer.</li>
+					<li>Whilst reading a book, javascript records the page number the user is on and sends this information to update the database.</li>
+					<li>When accessed from search results, the new book is added to a database of what the user is reading with no page number (as the user has just started the book), the book is opened on the first relevant page as dictated by the Google Books API and viewer (eg the contents page).</li>
+					<li>When accessed from the navigation bar, the viewer displays the first book on the list at the page number the user was on during their last session.</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<figure>
+					<img class="img-fluid my-3" src="images/Screenshots/28 freebook phone cropped reading (2).png" alt="Screenshot of search page">
+					<figcaption>Reading page on mobile</figcaption>
+				</figure>
+			</div>
+		</div>
+		<figure class="my-5">
+			<img class="img-fluid rounded float-right" src="images/Screenshots/22 freebook desktop cropped bookcase.png" alt="Screenshot of bookcase page">
+			<figcaption class="text-right">My Bookcase on desktop with book selected</figcaption>
+		</figure>
+		<h2 class="my-5">My Bookcase</h2>
+		<ul>
+			<li>Books are displayed as image thumbnails in horizontal scrollable lists under two headings; 'To Read' and 'Books you've read', they work as a wishlist and a finished list.</li>
+			<li>Each thumbnail activates a modal of information about the book (title, authors, publisher, published date and description)</li>
+			<li>Under 'To Read' list, the modals give an option to append a book to their finished list, remove the book or close the modal. If they have finished the book, it is deleted from their wish list and is added to their finished list.<li>
+			<li>Under the finished list, the modals give an option to remove the book or close the modal.</li>
+			<li>On removing a book, the page is rerendered with a flashed message informing the user that the book was removed.</li>
+		</ul>
+		<figure class="my-5">
+			<img class="img-fluid rounded float-right" src="images/Screenshots/24 freebook desktop cropped settings.png" alt="Screenshot of bookcase page">
+			<figcaption class="text-right">Settings page</figcaption>
+		</figure>
+		<h2 class="my-5">Settings</h2>
+		<ul>
+			<li>Options to change password, or permenantly delete account.</li>
+			<li>The form to change password operates as the login page does, with jQuery asynchronously checking the passwords adn a 500 code error thrown without javascript activate.</li>
+			<li>On deletion of the account, all data in the databases that include the user's id are deleted and the user is redirected to login/registration page with a flash message of successful deletion.</li>
+		</ul>
+	</main>
+	<footer class="text-center">
+		<p>Freebook was made using the Google Books API, Bootstrap, SQLite, ajax, jQuery, Flask and Python.</p>
+	</footer>
+</div>
+</body>
