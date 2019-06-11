@@ -22,6 +22,18 @@ figcaption {
 	color: #000;
 	font-weight: bolder;
 }
+code {
+	border-radius: 6px;
+	color: white;
+}
+.code{
+	background-color: black;
+	border-radius: 4px;
+}
+.pixel-row div{
+  padding-top: 20%;
+  box-sizing: border-box;
+}
 #bold {
 	font-weight: bold;
 }
@@ -64,6 +76,7 @@ figcaption {
 		.freebook-text h1{
 			color: #333;
 		}
+	
 	.worldwhat-text{
 		font-family: 'Varela Round', sans-serif;
 		font-size: 20px;
@@ -72,6 +85,10 @@ figcaption {
 	}
 		.worldwhat-text h1 {
 			color: green;
+		}
+		.worldwhat-text footer p{
+			font-weight: lighter;
+			font-size: 15px;
 		}
 .jumbotron{
 	background: none;
@@ -85,12 +102,7 @@ figcaption {
 		background: none;
 		border: none;
 	}
-/*.navbar, .navbar-light{
-	background: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-}*/
+
 .navbar-toggler{
 	position: absolute;
 	top: 12px;
@@ -101,7 +113,81 @@ figcaption {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
-/* Optional: show position indicator in red 
-::-webkit-scrollbar-thumb {
-    background: #fff;
-}*/
+
+/*     GRID IMAGE      */
+#a{
+	background-color: #b04c5f;
+}
+#b{
+	background-color: #89b033;
+}
+#c{
+	background-color: #8999de;
+}
+#d{
+	background-color: #495c12;
+}
+#e{
+	background-color: #6a0f2b;
+}
+#f{
+	background-color: #a7b41d;
+}
+#g{
+	background-color: #7581a6;
+}
+#h{
+	background-color: #d2889b;
+}
+#i{
+	background-color: #3b6adb;
+}
+#j{
+	background-color: #de7d26;
+}
+#k{
+	background-color: #9b1f05;
+}
+#l{
+	background-color: #b3323b;
+}
+#m{
+	background-color: #ca6cf3;
+}
+#n{
+	background-color: #30a211;
+}
+#o{
+	background-color: #1a94a3;
+}
+#p{
+	background-color: #4e7c59;
+}
+#q{
+	background-color: #774f45;
+}
+#r{
+	background-color: #9a1fbd;
+}
+#s{
+	background-color: #416fd0;
+}
+#t{
+	background-color: #a1f4bc;
+}
+#u{
+	background-color: #ae5dde;
+}
+#v{
+	background-color: #25575b;
+}
+#w{
+	background-color: #0badda;
+}
+#x{
+	background-color: #9562a2;
+}
+#y{
+	background-color: #f7e33b;
+}
+
